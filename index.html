@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #gallery {
+            display: flex;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        #gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        #gallery button {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            background: #ffffff7d;
+            border: none;
+        }
+
+        .img_wrapper {
+            margin: 10px;
+            position: relative;
+        }
+
+        .img_holder {
+            height: 250px;
+            background: #f3f3f3;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img_holder img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img_holder">
+        <img src="https://via.placeholder.com/150.png?text=Cat+Image" alt="" id="catImg" />
+        <img src="https://via.placeholder.com/150.png?text=Dog+Image" alt="" id="dogImg" />
+    </div>
+    <progress value="0" max="100" id="progress"></progress>
+    <input type="file" id="uploadBtn" />
+    <br />
+    <br />
+    <input type="text" id="imageName" />
+    <button id="submit">Submit</button>
+    <div id="gallery"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="./firebase-key.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
